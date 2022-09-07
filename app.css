@@ -1,0 +1,76 @@
+* {
+    margin: 0; padding: 0; box-sizing: border-box; font-family: 'Geometria', sans-serif;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 80%;
+    max-width: 900px;
+    border: 1px solid #000;
+    text-align: center;
+}
+.container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.content h2 {
+    font-size: 1.7rem;
+    margin: .3em 0;
+}
+.content h3 {
+    font-size: 1.35rem;
+}
+#score {
+    font-size: 3.5rem;
+    margin: .25em 0 .1em;
+}
+#score span {
+    transition: color .3s;
+}
+.content h4 {
+    font-size: 1.1rem;
+}
+.controls {
+    padding: 15px;
+    margin-top: 100px;
+}
+.controls p {
+    text-align: left;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+.controls button {
+    width: 32%;
+    border: none;
+    cursor: pointer;
+    padding: .6em 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    transition: opacity .35s;
+}
+.controls button:hover {
+    opacity: .8;
+}
+
+#p1-button { background-color: #e300c9; }
+#p2-button { background-color: #c2a439; }
+#reset-button { background-color: #cb0000; }
+
+.winner { color: #00d235; position: relative;}
+.winner::after {
+    content: '👑';
+    position: absolute; left: 50%; top: -8px;
+    transform: translateX(-50%);
+    font-size: 1.1rem;
+    opacity: .8;
+}
+.loser { color: #ba0000; }
+.disabled { opacity: .4; }
+.controls .disabled:hover { opacity: .4; cursor: auto; }
