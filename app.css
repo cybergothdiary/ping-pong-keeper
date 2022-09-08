@@ -38,14 +38,32 @@ body {
 }
 .controls {
     padding: 15px;
-    margin-top: 100px;
-}
-.controls p {
     text-align: left;
+}
+.controls__block {
+    margin: 30px 0;
+}
+.controls :is( label, p) {
     font-size: 1.3rem;
-    margin-bottom: 30px;
+    margin: .9em 0;
+}
+.controls :is( input[type="text"], input[type="number"]) {
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    outline: none;
+    font-size: 1.15rem;
+    margin: 0 .3em
+}
+.controls input[type="text"] {
+    padding: .3em .2em 0;
+    max-width: 15ch;
+}
+.controls input[type="number"] {
+    padding: .2em;
+    max-width: 12ch;
 }
 .controls button {
+    text-align: center;
     width: 32%;
     border: none;
     cursor: pointer;
