@@ -8,35 +8,47 @@
 </head>
 <body>
     <div class="container">
-        <img src="images/bg.webp" alt="Ping-Pong Background">
-        <div class="content">
-            <h2>Welcome to Ping-Pong Score Keeper!</h2>
-            <h3>Actual score is:</h3>
-            <h3 id="score">
-                <span>0</span> vs <span>0</span>
-            </h3>
-            <h4 id="p-names">
-                <span>Player 1</span> vs <span>Player 2</span>
-            </h4>
-        </div>
-        <div class="controls">
-            <div class="controls__block">
-                <label>Set the names if you would like to:</label>
+        <div class="game-container">
+            <img src="images/bg.webp" alt="Ping-Pong Background">
+            <div class="content">
+                <h2>Welcome to Ping-Pong Score Keeper!</h2>
+                <h3>Actual score is:</h3>
+                <h3 id="score">
+                    <span>0</span> vs <span>0</span>
+                </h3>
+                <h4 id="p-names">
+                    <span>Player 1</span> vs <span>Player 2</span>
+                </h4>
+            </div>
+            <div class="controls">
+                <div class="controls__block">
+                    <label>Set the names if you would like to:</label>
+                    <div>
+                        <input type="text" name="pname1" placeholder="Player 1">
+                        <input type="text" name="pname2" placeholder="Player 2">
+                    </div>
+                </div>
+                <div class="controls__block">
+                    <label for="winScoreInput">Now you keep playing until:</label>
+                    <input name="winScoreInput" type="number" placeholder="(Default is 5)">
+                </div>
                 <div>
-                    <input type="text" name="pname1" placeholder="Player 1">
-                    <input type="text" name="pname2" placeholder="Player 2">
+                    <p>Use the buttons below as controls:</p>
+                    <button id="p1-button">+1 to Player 1</button>
+                    <button id="p2-button">+1 to Player 2</button>
+                    <button id="reset-button">Reset</button>
                 </div>
             </div>
-            <div class="controls__block">
-                <label for="winScoreInput">Now you play until (> 0):</label>
-                <input name="winScoreInput" type="number" placeholder="(Default is 5)">
-            </div>
-            <div class="controls__block_btns">
-                <p>Use the buttons below as controls:</p>
-                <button id="p1-button">+1 to Player 1</button>
-                <button id="p2-button">+1 to Player 2</button>
-                <button id="reset-button">Reset</button>
-            </div>
+        </div>
+        <div class="table-container">
+            <table class="score-table" cellspacing="0">
+                <tr>
+                    <th>Player 1</th>
+                    <th>Player 2</th>
+                    <th>Score</th>
+                    <th>Winner</th>
+                </tr>
+            </table>
         </div>
     </div>
 

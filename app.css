@@ -4,17 +4,22 @@
 body {
     width: 100%;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 50px 0;
 }
 .container {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.game-container {
     width: 80%;
     max-width: 900px;
     border: 1px solid #000;
     text-align: center;
 }
-.container img {
+.game-container img {
     width: 100%;
     height: 300px;
     object-fit: cover;
@@ -34,7 +39,7 @@ body {
     transition: color .3s;
 }
 .content h4 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 .controls {
     padding: 15px;
@@ -51,7 +56,7 @@ body {
     border: none;
     border-bottom: 1px solid rgba(0,0,0,.1);
     outline: none;
-    font-size: 1.15rem;
+    font-size: 1.35rem;
     margin: 0 .3em
 }
 .controls input[type="text"] {
@@ -92,3 +97,75 @@ body {
 .loser { color: #ba0000; }
 .disabled { opacity: .4; }
 .controls .disabled:hover { opacity: .4; cursor: auto; }
+
+.table-container {
+    text-align: center;
+    height: 600px;
+    overflow: auto;
+    margin-left: 100px;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(172, 172, 172) rgb(240, 240, 240);
+}
+.table-container::-webkit-scrollbar { width: 8px; height: 5px; }
+.table-container::-webkit-hor
+.table-container::-webkit-scrollbar-track {background: rgb(240, 240, 240); }
+.table-container::-webkit-scrollbar-thumb {background: rgb(172, 172, 172); border-left: 3px white solid;}
+.score-table {
+    /* border: 1px solid rgba(0,0,0,.3); */
+    font-size: 1rem;
+    text-align: center;
+}
+.score-table th {
+    font-size: 1.3em;
+    padding: 1em .1em;
+}
+.score-table td, th {
+    border: 1px solid rgba(0,0,0,.3);
+    padding: 5px;
+}
+
+@media (max-width: 1150px) {
+    html {
+        font-size: .8rem;
+    }
+    .table-container {
+        height: 500px;
+    }
+}
+
+@media (max-width: 950px) {
+    body {
+        padding: 20px 0;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .game-container {
+        width: 100%;
+        border: none;
+    }
+    .table-container {
+        height: 400px;
+        margin: 50px 0;
+    }
+}
+
+@media (max-width: 564px) {
+    html {
+        font-size: .6rem;
+    }
+    .game-container img {
+        height: 150px;
+    }
+    .controls button {
+        font-size: 1rem;
+    }
+    .table-container {
+        height: 300px;
+    }
+    .score-table {
+        font-size: .8rem;
+    }
+
+}
